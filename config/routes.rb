@@ -1,5 +1,5 @@
 PlanillaHelp::Application.routes.draw do
-  get "paginas/home"
+  get "paginas/inicio"
 
   get "paginas/contacto"
 
