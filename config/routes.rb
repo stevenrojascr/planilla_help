@@ -1,4 +1,8 @@
 PlanillaHelp::Application.routes.draw do
+  get "paginas/home"
+
+  get "paginas/contacto"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
