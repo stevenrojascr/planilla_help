@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Cedula:</b>
+  <%= @empleado.cedula %>
+</p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @empleado.nombre %>
+</p>
+
+<p>
+  <b>Quincena:</b>
+  <%= @empleado.quincena %>
+</p>
+
+<p>
+  <b>Factor hora por quincena:</b>
+  <%= @empleado.factor_hora_por_quincena %>
+</p>
+
+<p>
+  <b>Fch ingreso:</b>
+  <%= @empleado.fch_ingreso %>
+</p>
+
+<p>
+  <b>Activo:</b>
+  <%= @empleado.activo %>
+</p>
+
+<p>
+  <b>Tel casa:</b>
+  <%= @empleado.tel_casa %>
+</p>
+
+<p>
+  <b>Tel movil:</b>
+  <%= @empleado.tel_movil %>
+</p>
+
+
+<%= link_to 'Edit', edit_empleado_path(@empleado) %> |
+<%= link_to 'Back', empleados_path %>

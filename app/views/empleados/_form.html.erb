@@ -1,0 +1,49 @@
+<%= form_for(@empleado) do |f| %>
+  <% if @empleado.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@empleado.errors.count, "error") %> prohibited this empleado from being saved:</h2>
+
+      <ul>
+      <% @empleado.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cedula %><br />
+    <%= f.text_field :cedula %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :quincena %><br />
+    <%= f.text_field :quincena %>
+  </div>
+  <div class="field">
+    <%= f.label :factor_hora_por_quincena %><br />
+    <%= f.text_field :factor_hora_por_quincena %>
+  </div>
+  <div class="field">
+    <%= f.label :fch_ingreso %><br />
+    <%= f.date_select :fch_ingreso %>
+  </div>
+  <div class="field">
+    <%= f.label :activo %><br />
+    <%= f.check_box :activo %>
+  </div>
+  <div class="field">
+    <%= f.label :tel_casa %><br />
+    <%= f.text_field :tel_casa %>
+  </div>
+  <div class="field">
+    <%= f.label :tel_movil %><br />
+    <%= f.text_field :tel_movil %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

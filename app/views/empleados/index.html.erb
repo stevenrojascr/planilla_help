@@ -1,0 +1,37 @@
+<h1>Listing empleados</h1>
+
+<table>
+  <tr>
+    <th>Cedula</th>
+    <th>Nombre</th>
+    <th>Quincena</th>
+    <th>Factor hora por quincena</th>
+    <th>Fch ingreso</th>
+    <th>Activo</th>
+    <th>Tel casa</th>
+    <th>Tel movil</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @empleados.each do |empleado| %>
+  <tr>
+    <td><%= empleado.cedula %></td>
+    <td><%= empleado.nombre %></td>
+    <td><%= empleado.quincena %></td>
+    <td><%= empleado.factor_hora_por_quincena %></td>
+    <td><%= empleado.fch_ingreso %></td>
+    <td><%= empleado.activo %></td>
+    <td><%= empleado.tel_casa %></td>
+    <td><%= empleado.tel_movil %></td>
+    <td><%= link_to 'Show', empleado %></td>
+    <td><%= link_to 'Edit', edit_empleado_path(empleado) %></td>
+    <td><%= link_to 'Destroy', empleado, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Empleado', new_empleado_path %>

@@ -1,4 +1,6 @@
 PlanillaHelp::Application.routes.draw do
+  resources :empleados
+
   get "paginas/inicio"
 
   get "paginas/contacto"
