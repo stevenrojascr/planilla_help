@@ -1,4 +1,4 @@
-<h1>Listing empleados</h1>
+<h1>Lista de empleados</h1>
 
 <table>
   <tr>
@@ -25,13 +25,13 @@
     <td><%= empleado.activo %></td>
     <td><%= empleado.tel_casa %></td>
     <td><%= empleado.tel_movil %></td>
-    <td><%= link_to 'Show', empleado %></td>
-    <td><%= link_to 'Edit', edit_empleado_path(empleado) %></td>
-    <td><%= link_to 'Destroy', empleado, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Ver', empleado %></td>
+    <td><%= link_to 'Editar', edit_empleado_path(empleado) %></td>
+    <td><%= link_to 'Borrar', empleado, :confirm => 'Está seguro?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Empleado', new_empleado_path %>
+<%= link_to 'Nuevo Empleado', new_empleado_path %>
