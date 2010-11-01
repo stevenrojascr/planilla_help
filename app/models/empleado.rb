@@ -32,7 +32,7 @@ class Empleado < ActiveRecord::Base
     validates :tel_movil, :format => {
                       :with => /^[8]{1}[0-9]{7}$/, 
                       :message => "deben ser 8 dígitos e iniciar con 8" }
-    validates :quincena_mayor_a_salario_minimo
+    validate :quincena_mayor_a_salario_minimo
 
   protected
     def quincena_mayor_a_salario_minimo
