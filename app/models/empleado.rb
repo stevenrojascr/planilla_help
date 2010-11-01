@@ -17,5 +17,6 @@
 #
 
 class Empleado < ActiveRecord::Base
-  validate :cedula, :nombre, :quincena, :factor_hora_por_quincena, :fch_ingreso, :activo, :presence => true
+    validates :cedula, :nombre, :quincena, :factor_hora_por_quincena, :fch_ingreso, :activo, :presence => true
+    validates :quincena, :factor_hora_por_quincena,:numericality=>{:greater_than_or_equal_to=>0.01} 
 end
